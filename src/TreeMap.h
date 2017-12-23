@@ -6,9 +6,6 @@
 #include <stdexcept>
 #include <utility>
 
-#define RED false
-#define BLACK true
-
 namespace aisdi
 {
 

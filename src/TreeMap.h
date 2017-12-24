@@ -401,6 +401,7 @@ private:
             tmp->right->parent = node;
 
         tmp->right = node;
+        node->parent = tmp;
 
         if(tmp->parent != nullptr) {
             if(tmp->parent->right == node)
@@ -420,6 +421,7 @@ private:
             tmp->left->parent = node;
 
         tmp->left = node;
+        node->parent = tmp;
 
         if(tmp->parent != nullptr) {
             if(tmp->parent->right == node)

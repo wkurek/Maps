@@ -238,7 +238,7 @@ public:
   const_iterator cend() const
   {
     if(isEmpty()) return ConstIterator(0, hashTable[0].end(), hashTable);
-    size_t i = BUCKETS_NUMBER - 1;
+    int i = BUCKETS_NUMBER - 1;
     while(i >= 0) {
         if(!hashTable[i].empty()) {
             return ConstIterator(i, hashTable[i].end(), hashTable);
@@ -335,7 +335,7 @@ public:
 
     if(index == 0) throw std::out_of_range("No access");
 
-    std::size_t i = index - 1;
+    int i = index - 1;
     while(i >= 0) {
         if(!hashTable[i].empty()) {
             it = --(hashTable[i].end());
